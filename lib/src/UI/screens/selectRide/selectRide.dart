@@ -9,6 +9,7 @@ class SelectRide extends StatefulWidget {
 }
 
 class _SelectRideState extends State<SelectRide> {
+  int selectInde = -1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,6 +69,51 @@ class _SelectRideState extends State<SelectRide> {
                   color: Colors.black,
                 ),
               ),
+              ExpansionTile(
+                title: Text("data"),
+                children: [
+                  ExpansionTile(
+                    title: Text("Inner data"),
+                    children: [
+                      Text("data"),
+                      Text("data"),
+                      Text("data"),
+                      Text("data"),
+                      Text("data"),
+                    ],
+                  ),
+                  ExpansionTile(
+                    title: Text("Inner data"),
+                    children: [
+                      Text("data"),
+                      Text("data"),
+                      Text("data"),
+                      Text("data"),
+                      Text("data"),
+                    ],
+                  ),
+                  ExpansionTile(
+                    title: Text("Inner data"),
+                    children: [
+                      Text("data"),
+                      Text("data"),
+                      Text("data"),
+                      Text("data"),
+                      Text("data"),
+                    ],
+                  ),
+                  ExpansionTile(
+                    title: Text("Inner data"),
+                    children: [
+                      Text("data"),
+                      Text("data"),
+                      Text("data"),
+                      Text("data"),
+                      Text("data"),
+                    ],
+                  ),
+                ],
+              )
             ],
           ),
           SizedBox(
@@ -78,10 +124,21 @@ class _SelectRideState extends State<SelectRide> {
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: const EdgeInsets.only(left: 10),
-                    child: Container(
-                      height: 90.sp,
-                      width: 90.sp,
-                      decoration: const BoxDecoration(color: Colors.amber),
+                    child: GestureDetector(
+                      onTap: () {
+                        print("show data");
+                        setState(() {
+                          selectInde = index;
+                        });
+                      },
+                      child: Container(
+                        height: 90.sp,
+                        width: 90.sp,
+                        decoration: BoxDecoration(
+                            color: selectInde == index
+                                ? Colors.black
+                                : Colors.amber),
+                      ),
                     ),
                   );
                 }),
