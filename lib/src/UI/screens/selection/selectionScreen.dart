@@ -76,7 +76,7 @@ class _SelectionScreenState extends State<SelectionScreen> {
               color: Colors.black,
               fontWeight: FontWeight.w500,
             ),
-          ))
+          )),
         ],
       ),
     );

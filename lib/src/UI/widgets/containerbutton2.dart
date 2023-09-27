@@ -20,7 +20,7 @@ class ContainerButton2 extends StatelessWidget {
         children: [
           Icon(
             icon,
-            size: 60,
+            size: 50,
             color: Colors.white,
           ),
           Text(
