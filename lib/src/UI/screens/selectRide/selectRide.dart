@@ -141,16 +141,6 @@ class _SelectRideState extends State<SelectRide> {
                         Text("data"),
                       ],
                     ),
-                    ExpansionTile(
-                      title: Text("Inner data"),
-                      children: [
-                        Text("data"),
-                        Text("data"),
-                        Text("data"),
-                        Text("data"),
-                        Text("data"),
-                      ],
-                    ),
                   ],
                 )
               ],
