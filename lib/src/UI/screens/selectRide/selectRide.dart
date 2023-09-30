@@ -146,7 +146,7 @@ class _SelectRideState extends State<SelectRide> {
               ],
             ),
             const SizedBox(
-              height: 300,
+              height: 290,
             ),
             // const Spacer(),
             InkWell(
