@@ -144,78 +144,111 @@ class _RideScreenState extends State<RideScreen> {
           ),
           Padding(
             padding: const EdgeInsets.only(left: 24),
-            child: Container(
-              height: 312.sp,
+            child: SizedBox(
+              height: 360.sp,
               width: 380.sp,
-              decoration: BoxDecoration(
-                border: Border.all(width: 2, color: Colors.grey),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const Column(
-                          children: [
-                            Image(image: AssetImage('assets/icons/clock.png')),
-                            Text('23:08'),
-                            Text(
-                              'Time',
-                              style: TextStyle(
-                                fontSize: 10,
-                                fontWeight: FontWeight.w400,
+              child: Column(
+                children: [
+                  Container(
+                    height: 312.sp,
+                    width: 380.sp,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(9),
+                      border: Border.all(width: 2, color: Colors.grey),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              const Column(
+                                children: [
+                                  Image(
+                                      image:
+                                          AssetImage('assets/icons/clock.png')),
+                                  Text('23:08'),
+                                  Text(
+                                    'Time',
+                                    style: TextStyle(
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.w400,
+                                      color: Colors.black,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              // const SizedBox(
+                              //   width: 15,
+                              // ),
+                              Container(
+                                height: 60.sp,
+                                width: 2.sp,
                                 color: Colors.black,
                               ),
-                            ),
-                          ],
-                        ),
-                        // const SizedBox(
-                        //   width: 15,
-                        // ),
-                        Container(
-                          height: 60.sp,
-                          width: 2.sp,
-                          color: Colors.black,
-                        ),
-                        const Column(
-                          children: [
-                            Image(image: AssetImage('assets/icons/Black.png')),
-                            Text('23:08'),
-                            Text(
-                              'Distance',
-                              style: TextStyle(
-                                fontSize: 10,
-                                fontWeight: FontWeight.w400,
+                              const Column(
+                                children: [
+                                  Image(
+                                      image:
+                                          AssetImage('assets/icons/Black.png')),
+                                  Text('23:08'),
+                                  Text(
+                                    'Distance',
+                                    style: TextStyle(
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.w400,
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Container(
+                                height: 60.sp,
+                                width: 2.sp,
                                 color: Colors.grey,
                               ),
-                            ),
-                          ],
-                        ),
-                        Container(
-                          height: 60.sp,
-                          width: 2.sp,
-                          color: Colors.grey,
-                        ),
-                        const Column(
-                          children: [
-                            Image(image: AssetImage('assets/icons/speed.png')),
-                            Text('23:08'),
-                            Text(
-                              'Avg.speed',
-                              style: TextStyle(
-                                fontSize: 10,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.grey,
+                              const Column(
+                                children: [
+                                  Image(
+                                      image:
+                                          AssetImage('assets/icons/speed.png')),
+                                  Text('23:08'),
+                                  Text(
+                                    'Avg.speed',
+                                    style: TextStyle(
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.w400,
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                ],
                               ),
-                            ),
-                          ],
-                        ),
-                      ],
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
-                  ],
-                ),
+                  ),
+                  const SizedBox(
+                    height: 9,
+                  ),
+                  const Row(
+                    children: [
+                      Icon(
+                        Icons.favorite_border_outlined,
+                        size: 30,
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Icon(
+                        Icons.comment_rounded,
+                        size: 30,
+                      )
+                    ],
+                  ),
+                ],
               ),
             ),
           )
